@@ -4,14 +4,17 @@
     "name": "Adblocker",
     "version": "1.0",
     "description": "Adblocker",
-    "background.service_worker": {
-        "service_worker": ["background.js"]
+    "background": {
+        "service_worker": "background.js"
+    },
+    "action": {
+        "default_popup": "public/popup.html"
     },
     "declarative_net_request": {
         "rule_resources": [
             {
                 "id": "ruleset_1",
-                "enabled": true,
+                "enabled": false,
                 "path": "src/rules/rules_1.json"
             }
         ]
