@@ -2,6 +2,7 @@ const btn = document.querySelector(".isActive");
 
 btn.addEventListener("click", async () => {
     chrome.runtime.sendMessage({action: "toggleAdBlock"}, async (response) => {
+        console.log("in popup.js")
 
         if(chrome.runtime.lastError){
             console.log(`error in popup.js |  ${chrome.runtime.lastError.message} `);
